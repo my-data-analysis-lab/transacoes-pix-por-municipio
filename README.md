@@ -6,7 +6,7 @@ Análise dos dados abertos de transações Pix disponibilizados pelo Banco Centr
 
 **Banco Central do Brasil — Dados Abertos**
 
-Dataset: **Transações Pix por Município**
+**Dataset:** Transações Pix por Município
 
 ## Dados
 
@@ -21,3 +21,36 @@ O dataset apresenta informações sobre transações Pix agregadas por municípi
 5. Análise exploratória
 6. Análise dos resultados
 7. Conclusões
+
+## Fluxo
+
+```text
+DADO BRUTO
+    │
+    ▼
+EXTRAÇÃO
+    │
+    ▼
+DATA PROFILING
+    │
+    ├──────────────────┐
+    ▼                  ▼
+METADADOS          QUALIDADE
+                       │
+              ┌────────┼─────────┐
+              ▼        ▼         ▼
+            Nulos  Duplicados  Inconsistências
+              │
+              └────────┬────────┘
+                       ▼
+               LIMPEZA E TRATAMENTO
+                       │
+                       ▼
+                    ANÁLISE
+                       │
+                       ▼
+                 VISUALIZAÇÕES
+                       │
+                       ▼
+                   CONCLUSÕES
+```
